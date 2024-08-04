@@ -12,7 +12,8 @@ Sub ApplyConditionalFormattingToAllCells()
         
         ' Add new conditional formatting to highlight cells with formulas
         With rng.FormatConditions.Add(Type:=xlExpression, Formula1:="=ISFORMULA(INDIRECT(""rc"",FALSE))")
-            .Font.Color = RGB(255, 0, 0) ' Red font color
+            .Interior.Color = RGB(173, 216, 230) ' Light blue background color
+            .Font.Italic = True ' Italic text
         End With
     Next ws
 End Sub
